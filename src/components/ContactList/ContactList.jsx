@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilteredContacts } from 'redux/selectors';
-import { deleteContact } from 'redux/operations';
+import { selectFilteredContacts } from 'redux/contacts/selectors';
+import { deleteContact } from 'redux/contacts/operations';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Button, ListItem, List, ItemWrapper } from './ContactList.styled';
 
