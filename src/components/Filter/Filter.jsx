@@ -1,22 +1,26 @@
-import { Input, Label } from './Filter.styled';
+import { Label } from './Filter.styled';
 import { useDispatch } from 'react-redux';
 import { filteredContacts } from 'redux/contacts/contactsSlice';
+import { Input } from '@chakra-ui/react';
+import { Label } from '../Style/Style.styled';
 
-export const Filter = () => {
+const Filter = () => {
   const dispatch = useDispatch();
 
   return (
     <Label>
-      Find contacts by name
+      Find contact by name
       <Input
+        size="xs"
+        variant="filled"
+        borderRadius="8px"
+        focusBorderColor="teal.500"
         type="text"
-        // value={filter}
-        onChange={event =>
-          dispatch(filteredContacts(event.target.value.trim()))
-        }
+        placeholder="Enter name"
+        onChange={e => dispatch(filteredContacts(e.target.value))}
       />
     </Label>
   );
 };
 
-//onChange={event => dispatch(setFilter(event.target.value.trim()))}
+export default Filter;

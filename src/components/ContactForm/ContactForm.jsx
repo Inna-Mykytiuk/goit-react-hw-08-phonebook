@@ -4,7 +4,7 @@ import { addContact } from 'redux/contacts/operations';
 import { toast } from 'react-toastify';
 import { Form, Input, Label, Button } from './ContactForm.styled';
 
-export const ContactForm = () => {
+const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -55,3 +55,5 @@ export const ContactForm = () => {
     </Form>
   );
 };
+
+export default ContactForm;

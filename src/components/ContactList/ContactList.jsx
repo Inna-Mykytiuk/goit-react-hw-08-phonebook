@@ -4,7 +4,7 @@ import { deleteContact } from 'redux/contacts/operations';
 import { FaTrashAlt } from 'react-icons/fa';
 import { Button, ListItem, List, ItemWrapper } from './ContactList.styled';
 
-export const ContactList = () => {
+const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
@@ -24,3 +24,5 @@ export const ContactList = () => {
     </List>
   );
 };
+
+export default ContactList;
