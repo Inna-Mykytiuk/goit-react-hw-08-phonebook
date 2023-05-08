@@ -2,7 +2,6 @@ import { Label } from './Filter.styled';
 import { useDispatch } from 'react-redux';
 import { filteredContacts } from 'redux/contacts/contactsSlice';
 import { Input } from '@chakra-ui/react';
-import { Label } from '../Style/Style.styled';
 
 const Filter = () => {
   const dispatch = useDispatch();
