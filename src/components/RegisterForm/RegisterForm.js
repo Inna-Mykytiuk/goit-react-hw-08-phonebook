@@ -8,8 +8,8 @@ import {
 import { BtnSubmitAuth } from 'components/Buttons/Buttons';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/authOperations';
-import { Form } from './RtgisterForm.styled';
+import { register } from 'redux/auth/authOperation';
+import { Form } from './RegisterForm.styled';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
