@@ -1,14 +1,14 @@
 import { Navigate } from 'react-router-dom';
-import useAuth from './hooks/useAuth';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from '../redux/auth/selectors';
+
+/**
+ * - If the route is restricted and the user is logged in, render a <Navigate> to redirectTo
+ * - Otherwise render the component
+ */
 
 export const RestrictedRoute = ({ component: Component, redirectTo = '/' }) => {
-  const { isLoggedIn } = useAuth();
-  return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
-};
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
-RestrictedRoute.propTypes = {
-  children: PropTypes.element,
-  restricted: PropTypes.bool,
-  redirectTo: PropTypes.string,
+  return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
 };

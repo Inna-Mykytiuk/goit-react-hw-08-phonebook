@@ -1,18 +1,11 @@
-import { Container, Title } from 'components/App/App.styled';
-import { GiRotaryPhone } from 'react-icons/gi';
+import { SectionHome } from './Home.styles';
 
 const Home = () => {
   return (
-    <Container>
-      <Title>
-        <span role="img" aria-label="Greeting icon">
-          <GiRotaryPhone
-            style={{ width: '120px', height: '120px', fill: 'teal' }}
-          />
-        </span>
-        Your phonebook welcome page!
-      </Title>
-    </Container>
+    <SectionHome>
+      <h1>Welcome to Phonebook!</h1>
+      <p>Create your own personal book of contacts</p>
+    </SectionHome>
   );
 };
 
